@@ -1,11 +1,11 @@
 package main
 
 
-import {
+import (
 	"os"
 	"github.com/gin-gonic/gin"
 	routes "go-jwt-project/routes"
-}
+)
 
 func main(){
 	port = os.GETENV("PORT")
@@ -25,5 +25,5 @@ func main(){
 	router.GET("/api-2", func(c *gin.Context){
 		c.JSON(200, gin.H{"success": "access granted for api-2"})
 	})
-	router.RUN{":" +port}
+	router.Run{":" +port}
 }
